@@ -2,6 +2,9 @@
 
 A missing static html page template for ASP.NET 5 for [StaticFiles middleware](https://github.com/aspnet/StaticFiles) and [Kestrel server](https://github.com/aspnet/KestrelHttpServer).
 
+![StaticPage home page](https://cloud.githubusercontent.com/assets/14539/11454321/f1ed498c-9627-11e5-8b30-e894354e9aae.png)
+
+
 ## Description
 
 There is a set of official [ASP.NET 5 Templates](https://github.com/aspnet/Templates) which prodives starting points for most common ASP.NET 5 development scenarios. Strangely, it still misses static html page template like [HTML 5 Boilerplate](https://github.com/h5bp/html5-boilerplate).
