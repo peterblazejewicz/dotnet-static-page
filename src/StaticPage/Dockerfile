@@ -1,4 +1,4 @@
-<% if(!coreclr){ %>FROM microsoft/aspnet:1.0.0-rc1-final<% } %><% if(coreclr){ %>FROM microsoft/aspnet:1.0.0-rc1-final-coreclr<% } %>
+FROM microsoft/aspnet:1.0.0-rc1-final
 
 COPY . /app
 WORKDIR /app
