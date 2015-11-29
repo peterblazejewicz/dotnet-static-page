@@ -1,4 +1,4 @@
-/// <binding Clean='clean' />
+/* jshint node: true */
 "use strict";
 
 var gulp = require("gulp"),
