@@ -17,9 +17,17 @@ namespace StaticPage
             CreateWebHostBuilder(args).Build().Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseWebRoot("public/")
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args)
+        {
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("hosting.json", optional: true, reloadOnChange: true)
+                .AddCommandLine(args)
+                .Build();
+            return WebHost.CreateDefaultBuilder(args)
+                .UseConfiguration(config)
                 .UseStartup<Startup>();
+        }
+
     }
 }
