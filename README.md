@@ -1,25 +1,19 @@
-# Missing static page template for ASP.NET 5
+# .NET 2 Core Static page
 
-A missing static html page template for ASP.NET 5 for [StaticFiles middleware](https://github.com/aspnet/StaticFiles) and [Kestrel server](https://github.com/aspnet/KestrelHttpServer).
-
-![StaticPage home page](https://cloud.githubusercontent.com/assets/14539/11454321/f1ed498c-9627-11e5-8b30-e894354e9aae.png)
-
+A project with static content, HTML5 markup, etc.
 
 ## Description
 
-There is a set of official [ASP.NET 5 Templates](https://github.com/aspnet/Templates) which prodives starting points for most common ASP.NET 5 development scenarios. Strangely, it still misses static html page template like [HTML 5 Boilerplate](https://github.com/h5bp/html5-boilerplate).
-
-This quick project provides such simple template, with the same features as could be found in related templates from [Base Templates source](https://github.com/aspnet/Templates/tree/dev/src/BaseTemplates).
+Upgraded from previous incarnation of that project based on asp.net core 1.\* static page template.
 
 ## Usage
 
-```
-dnu restore
+```sh
+dotnet restore
 
-dnu build
-
-dnx web
+dotnet run
 ```
 
 ## Author
+
 @peterblazejewicz
