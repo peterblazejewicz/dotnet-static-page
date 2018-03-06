@@ -19,6 +19,7 @@ namespace StaticPage
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseWebRoot("public/")
                 .UseStartup<Startup>();
     }
 }
