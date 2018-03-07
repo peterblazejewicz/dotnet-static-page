@@ -8,6 +8,11 @@ Upgraded from previous incarnation of that project based on asp.net core 1.\* st
 
 The sample uses `public` folder for assets/content folder, not `wwwroot`.
 
+Features include:
+
+- HTML5 history support
+- 404 error page support
+
 ## Usage
 
 ```sh
