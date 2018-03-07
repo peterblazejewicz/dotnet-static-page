@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -20,6 +21,23 @@ namespace StaticPage
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.Use(async (context, next) =>
+            {
+                await next();
+                if (context.Response.StatusCode == StatusCodes.Status404NotFound &&
+                  !Path.HasExtension(context.Request.Path.Value))
+                {
+                    Console.WriteLine("Redirect to /index.html");
+                    context.Request.Path = "/index.html";
+                    await next();
+                }
+                else if (context.Response.StatusCode == StatusCodes.Status404NotFound)
+                {
+                    Console.WriteLine("404 page");
+                    context.Request.Path = "/404.html";
+                    await next();
+                }
+            });
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -28,6 +46,7 @@ namespace StaticPage
             {
                 app.UseHsts();
             }
+
             DefaultFilesOptions options = new DefaultFilesOptions();
             options.DefaultFileNames.Clear();
             options.DefaultFileNames.Add("index.html");
