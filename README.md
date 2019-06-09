@@ -1,17 +1,16 @@
-# .NET 2 Core Static page
+# .NET Core Static page
 
 A project with static content, HTML5 markup, etc.
 
+- Angular based client application built to static page
+- .NET Core static page web site
+- .NET Core WebApi endpoint
+
 ## Description
 
-Upgraded from previous incarnation of that project based on asp.net core 1.\* static page template.
+TBD for new version
 
-The sample uses `public` folder for assets/content folder, not `wwwroot`.
-
-Features include:
-
-- HTML5 history support
-- 404 error page support
+Note that this version uses Dotnet 3 preview.
 
 ## Usage
 
