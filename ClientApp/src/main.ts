@@ -4,11 +4,11 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
-export function getBaseUrl() {
-  return document.getElementsByTagName('base')[0].href;
+export function getApiUrl() {
+  return (environment.apiEndpoint);
 }
 
-const providers = [{ provide: 'BASE_URL', useFactory: getBaseUrl, deps: [] }];
+const providers = [{ provide: 'API_ENDPOINT', useFactory: getApiUrl, deps: [] }];
 
 if (environment.production) {
   enableProdMode();
